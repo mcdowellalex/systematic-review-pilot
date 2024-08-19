@@ -1,0 +1,62 @@
+.small {
+  --icon-button-size: 12px;
+  --icon-padding: 2px;
+}
+.medium {
+  --icon-button-size: 24px;
+  --icon-padding: 4px;
+}
+.large {
+  --icon-button-size: 48px;
+  --icon-padding: 6px;
+}
+
+.button {
+  background-color: var(--bg-primary);
+  color: black;
+  text-decoration: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  padding: 3px;
+  /* microinteraction */
+  transition: 0.3s background-color ease-in-out;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-button-size);
+  height: var(--icon-button-size);
+}
+.span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-button-size);
+  height: var(--icon-button-size);
+}
+
+.icon {
+  width: var(--icon-button-size);
+  padding: var(--icon-padding);
+  height: var(--icon-button-size);
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: var(--hover-primary);
+}
+
+.button:active {
+  background-color: var(--active-primary);
+}
+
+.button:focus {
+  outline: 2px solid var(--focus-ring);
+}
+.button:disabled {
+  background-color: lightgray;
+  border: 2px solid gray;
+  cursor: not-allowed;
+}

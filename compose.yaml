@@ -1,0 +1,39 @@
+version: "3"
+
+services:
+  # FRONTEND COMPOSE
+  frontend:
+    build:
+      context: .
+      dockerfile: ./frontend/Dockerfile
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app/frontend
+      - /app/frontend/node_modules
+    environment:
+      - NODE_ENV=development
+  # BACKEND COMPOSE
+  backend:
+    build:
+      context: .
+      dockerfile: ./backend/Dockerfile
+    volumes:
+      - ./backend:/app/backend
+    ports:
+      - "8000:8000"
+#   # DATABASE COMPOSE
+#   postgresql:
+#     image: postgres:latest
+#     container_name: postgresql
+#     ports:
+#       - "5432:5432"
+#     environment:
+#       POSTGRES_USER: user
+#       POSTGRES_PASSWORD: password
+#       POSTGRES_DB: barkrdatabase
+#     volumes:
+#       - postgresql_data:/var/lib/postgresql/data
+
+# volumes:
+#   postgresql_data:

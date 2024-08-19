@@ -1,0 +1,6 @@
+.textbox {
+  border-radius: 4px;
+  border: 1px solid black;
+  padding: 4px;
+  padding-inline: 6px;
+}

@@ -1,0 +1,19 @@
+/* for all basic css variables */
+#root {
+  --color-primary: #faa497;
+  --color-secondary: #c75c62;
+  --color-tertiary: #3d3240;
+
+  --bg-primary: #faae8e;
+  --bg-secondary: #e46461;
+  --bg-tertiary: #653541;
+
+  --text: black;
+  --text-hover: #853119;
+  --text-active: #381209;
+
+  --focus-ring: #702612;
+
+  --hover-primary: #c45d41;
+  --active-primary: #bb2f09;
+}
